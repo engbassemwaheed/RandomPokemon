@@ -7,6 +7,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton loadPokemonButton;
     private DotsIndicator dotsIndicator;
     private ProgressBar loadingProgressBar;
+    private ScrollView scrollView;
+    private TextView noPokemonTextView;
 
     private PokemonViewModel pokemonViewModel;
     private PokemonViewPagerAdapter pokemonViewPagerAdapter;
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setListeners();
 
         if (pokemonViewModel.isFirstTime()) {
+            handleEmptyList();
             loadNewPokemon();
         }
     }
@@ -45,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         viewPager2 = findViewById(R.id.main_view_pager);
         viewPager2.setSaveEnabled(false);
         viewPager2.setAdapter(pokemonViewPagerAdapter);
+
+        //scroll view
+        scrollView = findViewById(R.id.scroll_view);
+
+        //no pokemon textview
+        noPokemonTextView = findViewById(R.id.no_pokemon_text_view);
 
         //dots indicator
         dotsIndicator = findViewById(R.id.dots_indicator);
@@ -56,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         //progress bar
         loadingProgressBar = findViewById(R.id.loading_progress_bar);
     }
-
 
 
     private void initVariables() {
@@ -74,9 +84,11 @@ public class MainActivity extends AppCompatActivity {
             pokemonViewPagerAdapter.notifyDataSetChanged();
             viewPager2.setCurrentItem(pokemonViewModel.getPokemonArrayListSize(), true);
 
+            handleEmptyList();
+
             setLoading(false);
 
-//            adjustDotsIndicator();
+            adjustDotsIndicator();
         });
 
         loadPokemonButton.setOnClickListener(view -> loadNewPokemon());
@@ -101,6 +113,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void handleEmptyList() {
+       if (pokemonViewModel.getPokemonArrayListSize() == 0) {
+            noPokemonTextView.setVisibility(View.VISIBLE);
+            scrollView.setVisibility(View.GONE);
+        } else {
+            noPokemonTextView.setVisibility(View.GONE);
+            scrollView.setVisibility(View.VISIBLE);
+           scrollView.scrollTo(0, 0);
+        }
+    }
+
     private void setLoading(boolean loading) {
         if (loading) {
             loadPokemonButton.setVisibility(View.GONE);
@@ -111,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void showSnackbar (int messageId) {
+    private void showSnackbar(int messageId) {
         Snackbar snackbar = Snackbar.make(viewPager2, messageId, Snackbar.LENGTH_SHORT);
         snackbar.show();
     }

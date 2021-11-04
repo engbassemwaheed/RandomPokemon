@@ -16,4 +16,5 @@
     <string name="new_pokemon">New Pokemon</string>
     <string name="error">An error occured!</string>
     <string name="please_connect_to_internet">Please connect to the internet!</string>
+    <string name="no_pokemon_found_yet">No pokemon found yet!</string>
 </resources>
