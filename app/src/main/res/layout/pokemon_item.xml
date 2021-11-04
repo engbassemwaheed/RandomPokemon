@@ -55,6 +55,7 @@
                 style="@style/Theme.RandomPokemon.CategoryTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
                 android:text="@string/images" />
 
 
@@ -103,6 +104,7 @@
                 style="@style/Theme.RandomPokemon.CategoryTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
                 android:text="@string/female_image" />
 
             <ImageView
@@ -150,6 +152,7 @@
                 style="@style/Theme.RandomPokemon.CategoryTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:text="@string/stats" />
 
             <LinearLayout
@@ -173,6 +176,7 @@
                 style="@style/Theme.RandomPokemon.CategoryTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:text="@string/moves" />
 
             <TextView
@@ -182,9 +186,10 @@
                 android:layout_marginStart="@dimen/inner_horizontal_margin"
                 android:layout_marginEnd="@dimen/inner_horizontal_margin"
                 android:ellipsize="end"
+                android:fontFamily="sans-serif"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/data_text_color"
-                android:textStyle="normal"
+                android:textStyle="bold"
                 tools:text="tackle • string-shot • snore • bug-bite " />
 
         </LinearLayout>
