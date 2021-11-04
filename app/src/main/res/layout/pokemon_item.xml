@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pokemon_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:elevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/main_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_vertical_margin"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/title_image_view"
+                android:layout_width="@dimen/title_image_width"
+                android:layout_height="@dimen/title_image_width"
+                android:contentDescription="@string/front_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="@dimen/title_text_margin"
+                android:layout_marginEnd="@dimen/title_text_margin"
+                android:fontFamily="@font/pokemon_solid"
+                android:gravity="center_vertical|start"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/main_text_size"
+                tools:text="Pokemon Name" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/default_image_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inner_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Theme.RandomPokemon.CategoryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/images" />
+
+
+            <ImageView
+                android:id="@+id/default_front_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/front_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/default_back_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/back_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/default_shiny_front_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/shiny_front_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/default_shiny_back_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/shiny_back_image"
+                tools:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/female_image_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inner_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Theme.RandomPokemon.CategoryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/female_image" />
+
+            <ImageView
+                android:id="@+id/female_front_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/female_front_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/female_back_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/female_back_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/female_shiny_front_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/shiny_female_front_image"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/female_shiny_back_image_view"
+                style="@style/Theme.RandomPokemon.ImageStyle"
+                android:layout_width="@dimen/sub_image_width"
+                android:layout_height="@dimen/sub_image_height"
+                android:contentDescription="@string/shiny_female_back_image"
+                tools:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stats_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inner_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Theme.RandomPokemon.CategoryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stats" />
+
+            <LinearLayout
+                android:id="@+id/stats_container_linear_layout"
+                style="@style/Theme.RandomPokemon.StatsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moves_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/inner_vertical_margin"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Theme.RandomPokemon.CategoryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/moves" />
+
+            <TextView
+                android:id="@+id/moves_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_horizontal_margin"
+                android:layout_marginEnd="@dimen/inner_horizontal_margin"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/data_text_color"
+                android:textStyle="normal"
+                tools:text="tackle • string-shot • snore • bug-bite " />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

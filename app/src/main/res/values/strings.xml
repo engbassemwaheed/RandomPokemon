@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Random Pokemon</string>
+    <string name="female_image">Female</string>
+    <string name="images">Images</string>
+    <string name="moves">Moves</string>
+    <string name="stats">Stats</string>
+
+    <string name="front_image">Pokemon front image</string>
+    <string name="back_image">Pokemon back image</string>
+    <string name="shiny_front_image">Pokemon shiny front image</string>
+    <string name="shiny_back_image">Pokemon shiny back image</string>
+    <string name="female_front_image">Pokemon female front image</string>
+    <string name="female_back_image">Pokemon female back image</string>
+    <string name="shiny_female_front_image">Pokemon shiny female front image</string>
+    <string name="shiny_female_back_image">Pokemon shiny female back image</string>
+    <string name="new_pokemon">New Pokemon</string>
+    <string name="error">An error occured!</string>
+    <string name="please_connect_to_internet">Please connect to the internet!</string>
+</resources>
