@@ -9,3 +9,4 @@
 - No network case and empty list cases are handled 
 
 - App is made compitable with accessibility features 
+- App supports dark theme
